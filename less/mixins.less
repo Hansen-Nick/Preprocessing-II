@@ -1,1 +1,21 @@
 // Mixins in here
+
+.flex-options(@justify-content: flex-start, @align-items: flex-start, @direction: row) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
+    flex-direction: @direction;
+} 
+
+.button(@radius: 0, @padding: 5px 15px, @bg-color: white,) {
+    border-radius: @radius;
+    padding: @padding;
+    background-color: @bg-color;
+    text-align: center;
+    color:white;
+    font-size: 2rem;
+
+    &:hover {
+        background-color: darken(@bg-color, 5%)
+    }
+}
